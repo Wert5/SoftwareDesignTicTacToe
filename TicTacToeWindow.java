@@ -1,4 +1,5 @@
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -39,6 +40,10 @@ public class TicTacToeWindow extends JFrame {
 		gridButtons[x][y].setEnabled(e);
 	}
 	
+	public void addActionGrid(int x, int y, ActionListener a){
+		gridButtons[x][y].addActionListener(a);
+	}
+	
 	public TicTacToeWindow(){
 		super();
 		xImage= new ImageIcon("TicTacToeX.png");
@@ -54,6 +59,12 @@ public class TicTacToeWindow extends JFrame {
 				
 			}
 		}
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.setSize(600,600);
+		this.setTitle("Tic Tac Toe");
+		this.setVisible(true);
 		
 	}
 }
