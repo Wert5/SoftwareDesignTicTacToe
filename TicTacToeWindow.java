@@ -1,3 +1,5 @@
+package TicTacToe;
+
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 
@@ -9,7 +11,7 @@ public class TicTacToeWindow extends JFrame {
 	private ImageIcon xImage;
 	private ImageIcon oImage;
 	private ImageIcon blankImage;
-	enum icon {X,O,BLANK}
+	public enum icon {X,O,BLANK};
 	
 	public void setImagePosition (int x, int y, icon a){
 		switch(a){
