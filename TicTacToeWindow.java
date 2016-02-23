@@ -34,6 +34,11 @@ public class TicTacToeWindow extends JFrame {
 		w.setVisible(true);
 		
 	}
+	
+	public void setEnabledGrid(int x, int y, boolean e){
+		gridButtons[x][y].setEnabled(e);
+	}
+	
 	public TicTacToeWindow(){
 		super();
 		xImage= new ImageIcon("TicTacToeX.png");
