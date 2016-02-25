@@ -28,6 +28,17 @@ public class TicTacToeWindow extends JFrame {
 		
 	}
 	
+	public icon getImagePosition (int x, int y){
+		JButton b= gridButtons[x][y];
+		if(b.getIcon()==xImage){
+			return icon.X;
+		}else if(b.getIcon()==xImage){
+			return icon.O;
+		}else{
+			return icon.BLANK;
+		}
+	}
+	
 	public static void main(String[] args) {
 		TicTacToeWindow w= new TicTacToeWindow();
 		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
